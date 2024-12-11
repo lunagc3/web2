@@ -1,0 +1,13 @@
+<h3>Acceso al sistema</h3>
+<form>
+<div class="mb-3">
+  <input class="form-control" type="email" (change)="error=false" [(ngModel)]="email" placeholder="E-mail" name="email" required />
+</div>
+<div class="mb-3">
+  <input class="form-control" type="password" (change)="error=false" [(ngModel)]="pass" placeholder="Clave" name="pass" required />
+</div>
+<div *ngIf="error">
+    <small class="text-danger">Las credenciales ingresadas son incorrectas</small>
+</div>
+<button type="button" class="btn btn-primary" (click)="login()">Ingresar</button>
+</form>

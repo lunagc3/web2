@@ -1,0 +1,11 @@
+<figure *ngIf="!error">
+  <blockquote class="blockquote">
+    <p>{{ mensaje }}</p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Alguien importante en <cite title="Source Title">evento importante</cite>
+  </figcaption>
+</figure>
+<div *ngIf="error">
+  <h2 class="text-center text-danger">Error recuperando datos</h2>
+</div>
